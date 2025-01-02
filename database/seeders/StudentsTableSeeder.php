@@ -2,19 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use App\Models\Student;
+use Illuminate\Database\Seeder;  // Thêm dòng này
 
-class DatabaseSeeder extends Seeder
+class StudentsTableSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
+    public function run()
     {
-        \App\Models\Student::factory()->count(10)->create();
-
+        // Thêm dữ liệu mẫu cho sinh viên
         Student::create([
             'firstname' => 'Le Thu',
             'lastname' => 'Nguyen',

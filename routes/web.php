@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/students');  // Chuyển hướng từ trang chủ đến /students
 });
+
+Route::get('/students', [StudentController::class, 'index']);
